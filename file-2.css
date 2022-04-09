@@ -1,0 +1,163 @@
+
+body{
+   background-image: url("b1.png") ;
+   background-attachment: fixed;
+}
+a{
+   color:rgb(204, 184, 204);
+}
+
+
+h2{
+   font-family: cursive;
+   text-align: flex-start;
+}
+.contents{
+   display: grid;
+   margin-top: 40%;
+   grid-template-columns: 30% 70%;
+   grid-column-gap:1px;
+   grid-row-gap: 20vh;
+}
+.key{
+   background-color: rgb(204, 184, 204);
+   text-align: center;
+   grid-column:1/2;  
+}
+
+#pic{
+   width: 300px;
+   height: 500px;
+   margin-left: 25px;
+}
+.value{
+   
+   background-color:black;
+   color: rgb(204, 184, 204);
+   padding-top: 20px;
+   grid-column: 2/4;
+   padding-left: 10px;
+}
+.value p{
+   font-size: 18px;
+   padding-left: 30px;
+}
+#skills{
+   font-size: xx-large;
+}
+#skills h2{
+   margin-top: 50%;
+   text-align: center;
+}
+#Certifications{
+   font-size: xx-large;
+}
+#Certifications h2{
+   margin-top: 50%;
+}
+#Contact{
+   font-size: xx-large;
+}
+#Contact h2{
+   margin-top: 25%;
+}
+.contents ul{
+   font-size: 17px;
+}
+
+.container{
+   display: flex;
+   width: 100%;
+}
+.title{
+   width: 42.4%;
+   text-align: center;
+   text-decoration: overline underline;
+   font-family: 'Courier New', Courier, monospace;
+   background-color:rgb(204, 184, 204);
+}
+
+
+header{
+
+   display:grid;
+   grid-template-columns:repeat(2,2fr);
+   position:fixed;
+   width:100%;
+}
+nav{
+   width: 100%;
+   background-color: black;
+}
+
+nav ul{
+   margin: 0;
+   padding: 30px;
+   list-style-type: none;
+}
+ 
+nav li{
+   display: block;
+   margin-right: 40px;
+   position: relative;
+   float:right;
+}
+nav a{
+   color:  rgb(204, 184, 204);
+   text-decoration:none;
+   text-transform: uppercase;
+}
+nav a:hover{
+   color:rgb(204, 184, 204);
+}
+nav a::before{
+   content: '';
+   height: 1px;
+   width: 0%;
+   background-color: rgb(204, 184, 204);
+   position:absolute;
+   transition: all ease-in-out 300ms;
+ 
+}
+nav a:hover::before{
+   width:100%;
+}
+header{
+   display: flex;
+}
+
+pre ul{
+   list-style-type: square;
+}
+.texts{
+   display:grid;
+   grid-template-columns: repeat(1,4fr);
+}
+.arsenal h2{
+   position: relative;
+   margin-top: 20%;
+   margin-left: 30px;
+   text-transform: uppercase;
+   color: transparent;
+}
+.arsenal h2::before{
+   content: attr(data-text);
+   position: absolute;
+   top:0;
+   left:0;
+   width:0;
+   height:100%;
+   color: black;
+   border-right: black solid;
+   border-width: 2px;
+   overflow: hidden;
+   animation: animate 10s linear infinite;
+}
+@keyframes animate{
+   0%,10%,100%{
+      width: 0;
+   }
+   70%,90%{
+      width: 61%;
+   }
+}
